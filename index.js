@@ -17,7 +17,7 @@ mongoose.connect(
   process.env.MONGO_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
-    console.log("Connected to MongoDB");
+    console.log("Connected to MongoDB Database");
   }
 );
 app.use("/images", express.static(path.join(__dirname, "public/images")));
@@ -50,5 +50,5 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
 app.listen(8800, () => {
-  console.log("Backend server is running!");
+  console.log("Church server is running!");
 });
